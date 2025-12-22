@@ -328,16 +328,18 @@
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 1.5rem;
+            max-width: 100%;
         }
 
         .skill-category {
             background: var(--bg-light);
-            padding: 1.8rem;
+            padding: 1.5rem;
             border-radius: 8px;
             border: 1px solid rgba(100, 255, 218, 0.1);
             transition: transform 0.3s ease, border-color 0.3s ease;
+            height: 100%;
         }
 
         .skill-category:hover {
@@ -518,9 +520,13 @@
         /* About Section */
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.2fr 0.8fr;
             gap: 4rem;
             align-items: start;
+        }
+
+        .about-text {
+            max-width: 100%;
         }
 
         .about-text p {
@@ -533,6 +539,8 @@
             display: flex;
             flex-direction: column;
             gap: 2rem;
+            position: sticky;
+            top: 100px;
         }
 
         .credential-item {
@@ -690,6 +698,17 @@
             transform: translateY(0);
         }
 
+        /* Research Section Styles */
+        .research-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--secondary-color) !important;
+            box-shadow: 0 15px 40px var(--shadow);
+        }
+
+        .research-vision {
+            animation: fadeInUp 0.8s ease;
+        }
+
         /* Responsive Design */
         @media (max-width: 968px) {
             .about-content {
@@ -813,6 +832,7 @@
                 <li><a href="#home" onclick="closeMenu()">Home</a></li>
                 <li><a href="#work" onclick="closeMenu()">Work</a></li>
                 <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#research" onclick="closeMenu()">Exploration</a></li>
                 <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
                 <li>
                     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
@@ -1181,6 +1201,138 @@
                                 <h4>Dr. Ramkumar S</h4>
                                 <p>Former COO, CfHE, IIT Hyderabad</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Interests & Future Focus Section -->
+    <section id="research" style="background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-light) 100%);">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Exploration</p>
+                <h2 class="section-title">Research Interests & Learning Path</h2>
+                <p class="section-description">
+                    Actively exploring the frontiers of AI to solve fundamental challenges and unlock transformative capabilities
+                </p>
+            </div>
+
+            <div style="max-width: 1100px; margin: 0 auto;">
+                <!-- Main Research Vision -->
+                <div class="research-vision fade-in" style="background: var(--bg-secondary); padding: 3rem; border-radius: 12px; margin-bottom: 3rem; box-shadow: 0 10px 40px var(--shadow); border-left: 5px solid var(--secondary-color);">
+                    <div style="display: flex; align-items: flex-start; gap: 1.5rem; margin-bottom: 2rem;">
+                        <div style="background: rgba(100, 255, 218, 0.1); padding: 1rem; border-radius: 10px; flex-shrink: 0;">
+                            <i class="fas fa-brain" style="font-size: 2.5rem; color: var(--secondary-color);"></i>
+                        </div>
+                        <div>
+                            <h3 style="color: var(--text-primary); font-size: 1.8rem; margin-bottom: 1rem; font-weight: 700;">
+                                Advancing AI Toward AGI
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;">
+                                Dedicated to solving the scientific and technological limitations in current AI systems that are critical to enabling breakthrough progress toward more powerful, useful, and beneficial artificial intelligence—including the path to <strong style="color: var(--text-primary);">Artificial General Intelligence (AGI)</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Focus Areas Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                    <!-- Focus Area 1 -->
+                    <div class="research-card fade-in" style="background: var(--bg-light); padding: 2rem; border-radius: 10px; border: 2px solid rgba(100, 255, 218, 0.1); transition: all 0.3s ease;">
+                        <div style="background: rgba(100, 255, 218, 0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                            <i class="fas fa-project-diagram" style="font-size: 1.8rem; color: var(--secondary-color);"></i>
+                        </div>
+                        <h4 style="color: var(--text-primary); font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600;">
+                            Generalizability & Transfer Learning
+                        </h4>
+                        <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+                            Exploring how AI systems can generalize across domains, adapt to novel situations, and transfer knowledge effectively—moving beyond narrow task-specific solutions.
+                        </p>
+                    </div>
+
+                    <!-- Focus Area 2 -->
+                    <div class="research-card fade-in" style="background: var(--bg-light); padding: 2rem; border-radius: 10px; border: 2px solid rgba(100, 255, 218, 0.1); transition: all 0.3s ease;">
+                        <div style="background: rgba(100, 255, 218, 0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                            <i class="fas fa-link" style="font-size: 1.8rem; color: var(--secondary-color);"></i>
+                        </div>
+                        <h4 style="color: var(--text-primary); font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600;">
+                            Causal Reasoning & Understanding
+                        </h4>
+                        <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+                            Investigating causal inference mechanisms that enable AI to understand cause-and-effect relationships, supporting more robust decision-making and explainability.
+                        </p>
+                    </div>
+
+                    <!-- Focus Area 3 -->
+                    <div class="research-card fade-in" style="background: var(--bg-light); padding: 2rem; border-radius: 10px; border: 2px solid rgba(100, 255, 218, 0.1); transition: all 0.3s ease;">
+                        <div style="background: rgba(100, 255, 218, 0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                            <i class="fas fa-layer-group" style="font-size: 1.8rem; color: var(--secondary-color);"></i>
+                        </div>
+                        <h4 style="color: var(--text-primary); font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600;">
+                            Higher-Level & Meta-Cognition
+                        </h4>
+                        <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+                            Studying meta-learning, reasoning about reasoning, and self-improvement capabilities—enabling AI systems to optimize their own learning processes.
+                        </p>
+                    </div>
+
+                    <!-- Focus Area 4 -->
+                    <div class="research-card fade-in" style="background: var(--bg-light); padding: 2rem; border-radius: 10px; border: 2px solid rgba(100, 255, 218, 0.1); transition: all 0.3s ease;">
+                        <div style="background: rgba(100, 255, 218, 0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                            <i class="fas fa-users" style="font-size: 1.8rem; color: var(--secondary-color);"></i>
+                        </div>
+                        <h4 style="color: var(--text-primary); font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600;">
+                            Multi-Agent Systems & Collaboration
+                        </h4>
+                        <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+                            Researching coordination, communication, and emergent behaviors in multi-agent environments—building systems where AI agents work together toward complex goals.
+                        </p>
+                    </div>
+
+                    <!-- Focus Area 5 -->
+                    <div class="research-card fade-in" style="background: var(--bg-light); padding: 2rem; border-radius: 10px; border: 2px solid rgba(100, 255, 218, 0.1); transition: all 0.3s ease;">
+                        <div style="background: rgba(100, 255, 218, 0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                            <i class="fas fa-lightbulb" style="font-size: 1.8rem; color: var(--secondary-color);"></i>
+                        </div>
+                        <h4 style="color: var(--text-primary); font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600;">
+                            Novel Knowledge Generation
+                        </h4>
+                        <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+                            Exploring AI's ability to generate new scientific conjectures, theories, and discoveries—moving from pattern recognition to genuine knowledge creation.
+                        </p>
+                    </div>
+
+                    <!-- Focus Area 6 -->
+                    <div class="research-card fade-in" style="background: var(--bg-light); padding: 2rem; border-radius: 10px; border: 2px solid rgba(100, 255, 218, 0.1); transition: all 0.3s ease;">
+                        <div style="background: rgba(100, 255, 218, 0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                            <i class="fas fa-microchip" style="font-size: 1.8rem; color: var(--secondary-color);"></i>
+                        </div>
+                        <h4 style="color: var(--text-primary); font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600;">
+                            Compute Architecture & Efficiency
+                        </h4>
+                        <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+                            Investigating novel compute architectures, resource optimization, and efficiency breakthroughs—making advanced AI more accessible and sustainable.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bottom Call-to-Action -->
+                <div class="research-cta fade-in" style="background: var(--bg-secondary); padding: 2.5rem; border-radius: 12px; text-align: center; box-shadow: 0 10px 40px var(--shadow);">
+                    <div style="max-width: 700px; margin: 0 auto;">
+                        <i class="fas fa-rocket" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                        <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 1rem; font-weight: 700;">
+                            Pushing the Boundaries of What's Possible
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                            These research directions represent the hard problems that, once solved, will unlock unprecedented beneficial capabilities and bring us closer to realizing the full potential of artificial intelligence.
+                        </p>
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                            <span style="background: rgba(100, 255, 218, 0.1); color: var(--secondary-color); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500;">#AGI</span>
+                            <span style="background: rgba(100, 255, 218, 0.1); color: var(--secondary-color); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500;">#FrontierResearch</span>
+                            <span style="background: rgba(100, 255, 218, 0.1); color: var(--secondary-color); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500;">#AIBreakthroughs</span>
+                            <span style="background: rgba(100, 255, 218, 0.1); color: var(--secondary-color); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500;">#BeneficialAI</span>
                         </div>
                     </div>
                 </div>
