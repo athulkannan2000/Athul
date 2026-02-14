@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Loader2, CheckCircle, XCircle, Trophy } from 'lucide-react';
 import type { Word, EtymologyQuest } from '../types';
 import { geminiService } from '../geminiService';
@@ -18,7 +18,7 @@ export default function EtymologyQuestGame({ words, seenWords, onWordUnlocked }:
   const [score, setScore] = useState(0);
   const [unlockedWord, setUnlockedWord] = useState<Word | null>(null);
 
-  const loadNewQuest = async () => {
+  const loadNewQuest = useCallback(async () => {
     setLoading(true);
     setResult(null);
     setUserAnswer('');
@@ -32,11 +32,11 @@ export default function EtymologyQuestGame({ words, seenWords, onWordUnlocked }:
     } finally {
       setLoading(false);
     }
-  };
+  }, [level, seenWords]);
 
   useEffect(() => {
     loadNewQuest();
-  }, []);
+  }, [loadNewQuest]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

@@ -9,7 +9,7 @@ export class GeminiService {
   private textModel;
   
   constructor() {
-    // Use gemini-3-flash-preview for text generation
+    // Use gemini-1.5-flash for text generation
     this.textModel = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
   }
 
