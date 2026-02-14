@@ -517,6 +517,27 @@
             font-weight: 500;
         }
 
+        .work-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .work-link:hover {
+            color: var(--accent-color);
+            transform: translateX(5px);
+        }
+
+        .work-link i {
+            font-size: 0.9rem;
+        }
+
         /* About Section */
         .about-content {
             display: grid;
@@ -1000,6 +1021,41 @@
                             <span class="tech-tag">Azure</span>
                             <span class="tech-tag">Node.js</span>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Widen the Lens -->
+                <div class="work-item fade-in">
+                    <div class="work-content">
+                        <p class="work-label">AI Innovation Platform</p>
+                        <h3>Widen the Lens - AI-Powered Ideation Platform</h3>
+                        <p class="work-description">
+                            Built a world-class AI-powered innovation platform that transforms linear brainstorming into structured, high-velocity exploration of the solution space. Architected a three-pillar system combining graph engines for relationship traversal, vector intelligence for semantic similarity, and relational management for project state—creating an "IDE for the Mind."
+                        </p>
+                        <div class="work-metrics">
+                            <div class="metric">
+                                <span class="metric-value">Multi</span>
+                                <span class="metric-label">Modal Views</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">AI</span>
+                                <span class="metric-label">Augmented</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">Graph</span>
+                                <span class="metric-label">Visualization</span>
+                            </div>
+                        </div>
+                        <div class="work-tech">
+                            <span class="tech-tag">Gemini 2.5</span>
+                            <span class="tech-tag">Graph Engine</span>
+                            <span class="tech-tag">Vector DB</span>
+                            <span class="tech-tag">SCAMPER</span>
+                            <span class="tech-tag">React</span>
+                        </div>
+                        <a href="https://lens.cortexngrey.com/" target="_blank" rel="noopener noreferrer" class="work-link">
+                            View Live Project <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
             </div>
